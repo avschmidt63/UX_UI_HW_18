@@ -9,17 +9,6 @@ body {
   box-sizing: border-box;
 }
 
-.grid-container {
-  display: grid, inline-grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.25fr 1fr 0.25fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    'nav'
-    'main'
-    'footer';
-}
-
 .navBar {
   grid-area: nav;
 }
@@ -86,4 +75,13 @@ body {
 
 .footer {
   grid-area: footer;
+}
+
+@media only screen and (max-width: 600px) {
+  .gridContainer {
+    flex-direction: column;
+  }
+  .gridContainer img {
+    width: 100%;
+  }
 }
